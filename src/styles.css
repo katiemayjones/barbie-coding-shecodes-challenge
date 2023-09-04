@@ -23,11 +23,7 @@ section {
 }
 
 header {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(230, 65, 141, 0.1)
-    ),
-    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/710/original/margot-car.jpeg?1693829472");
+  background-image: url("../images/gallery/margot-robbie-dancing.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -57,7 +53,7 @@ p {
 }
 
 .trailer {
-  translate: 0px -200px;
+  translate: 0px -150px;
 }
 
 iframe {
@@ -77,6 +73,7 @@ iframe {
 .ryanGosling {
   border-top: #e6418d 5px solid;
   border-bottom: #e6418d 5px solid;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
   margin-top: 20px;
   display: grid;
@@ -130,4 +127,16 @@ iframe {
   100% {
     opacity: 1;
   }
+}
+
+footer {
+  color: #e6418d;
+  font-family: "dancing script";
+  font-size: 20px;
+  padding: 5px;
+}
+
+a {
+  color: #e6418d;
+  text-decoration: none;
 }

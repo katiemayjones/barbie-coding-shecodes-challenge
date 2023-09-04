@@ -1,0 +1,133 @@
+body {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fdf5fa;
+  font-family: "Cormorant Garamond", serif;
+}
+
+section {
+  height: 100vh;
+}
+
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+header {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(230, 65, 141, 0.1)
+    ),
+    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/710/original/margot-car.jpeg?1693829472");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 200px 0;
+  height: 100%;
+  border-bottom: #e6418d 5px solid;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+}
+
+h1 {
+  color: #e6418d;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 160px;
+}
+
+h2 {
+  font-size: 72px;
+  font-family: "Dancing Script", cursive;
+  color: #e6418d;
+  padding: 20px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.trailer {
+  translate: 0px -200px;
+}
+
+iframe {
+  border: #e6418d 5px solid;
+  border-radius: 9px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+}
+
+.main {
+  background-color: white;
+  border-radius: 9px;
+  padding: 10px;
+  max-width: 800px;
+}
+
+.ryanGosling {
+  border-top: #e6418d 5px solid;
+  border-bottom: #e6418d 5px solid;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.margotRobbie {
+  border-top: white 5px solid;
+  border-bottom: white 5px solid;
+  background-color: #e6418d;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.margotRobbie img {
+  display: block;
+  border-right: white 10px solid;
+}
+
+.logo {
+  position: relative;
+  top: -200px;
+  animation: fadeIn 5s;
+}
+
+.castWrapper img {
+  padding: 10px;
+}
+
+.castWrapper {
+  max-width: 800px;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  background-color: white;
+  border: #e6418d 5px solid;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+}
+
+.quotes {
+  font-size: 50px;
+  padding: 50px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

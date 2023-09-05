@@ -4,7 +4,7 @@ body {
   margin: 0 auto;
   padding: 0;
   background-color: #fdf5fa;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 section {
@@ -29,7 +29,6 @@ header {
   color: white;
   text-align: center;
   padding: 200px 0;
-  height: 100%;
   border-bottom: #e6418d 5px solid;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
 }
@@ -51,6 +50,13 @@ h2 {
   font-size: 72px;
   font-family: "Dancing Script", cursive;
   color: #e6418d;
+  padding: 20px;
+}
+
+h3 {
+  font-size: 72px;
+  font-family: "Dancing Script", cursive;
+  color: white;
   padding: 20px;
 }
 
@@ -90,6 +96,14 @@ iframe {
   border-left: #e6418d 10px solid;
 }
 
+.ryanGosling ul {
+  list-style: none;
+  font-size: 32px;
+  color: #e6418d;
+  line-height: 100px;
+  margin-top: 20px;
+}
+
 .margotRobbie {
   border-top: white 5px solid;
   border-bottom: white 5px solid;
@@ -97,12 +111,20 @@ iframe {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .margotRobbie img {
   display: block;
   border-right: white 10px solid;
+}
+
+.margotRobbie ul {
+  list-style: none;
+  font-size: 32px;
+  color: white;
+  line-height: 100px;
+  margin-top: 20px;
 }
 
 .cast {
@@ -155,9 +177,10 @@ iframe {
 
 .photoThree {
   max-width: 1000px;
-  border: #e6418d 5px solid;
+  border: white 5px solid;
   border-radius: 9px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  margin-bottom: 20px;
 }
 
 .photoFour {
@@ -192,13 +215,19 @@ iframe {
 }
 
 footer {
-  color: #e6418d;
-  font-family: "dancing script";
+  color: white;
   font-size: 20px;
   padding: 5px;
+  background-color: #e6418d;
 }
 
 a {
-  color: #e6418d;
+  color: white;
   text-decoration: none;
+  font-family: "dancing script";
+}
+
+i {
+  padding: 30px;
+  font-size: 32px;
 }

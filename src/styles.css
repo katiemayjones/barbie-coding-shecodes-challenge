@@ -1,7 +1,5 @@
 body {
   text-align: center;
-  display: block;
-  margin: 0 auto;
   padding: 0;
   background-color: #fdf5fa;
   font-family: "Didact Gothic", sans-serif;
@@ -31,6 +29,8 @@ header {
   padding: 200px 0;
   border-bottom: #e6418d 5px solid;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  max-width: 100%;
+  height: auto;
 }
 
 .logo {
@@ -83,8 +83,7 @@ iframe {
 }
 
 .ryanGosling {
-  border-top: #e6418d 5px solid;
-  border-bottom: #e6418d 5px solid;
+  border: #e6418d 5px solid;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
   margin-top: 20px;
@@ -92,38 +91,34 @@ iframe {
   grid-template-columns: 1fr 1fr;
 }
 
-.ryanGosling img {
-  border-left: #e6418d 10px solid;
-}
-
 .ryanGosling ul {
   list-style: none;
-  font-size: 32px;
+  font-size: 34px;
   color: #e6418d;
-  line-height: 100px;
   margin-top: 20px;
 }
 
+.ryanGosling img {
+  border-left: #e6418d 5px solid;
+}
+
 .margotRobbie {
-  border-top: white 5px solid;
-  border-bottom: white 5px solid;
+  border: white 5px solid;
   background-color: #e6418d;
+  border-radius: 9px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
-  margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .margotRobbie img {
-  display: block;
-  border-right: white 10px solid;
+  border-right: white 5px solid;
 }
 
 .margotRobbie ul {
   list-style: none;
-  font-size: 32px;
+  font-size: 34px;
   color: white;
-  line-height: 100px;
   margin-top: 20px;
 }
 
@@ -230,4 +225,92 @@ a {
 i {
   padding: 30px;
   font-size: 32px;
+}
+
+@media (max-width: 964px) {
+  .margotRobbie {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  .margotRobbie ul {
+    font-size: 18px;
+  }
+
+  .margotRobbie img {
+    border-bottom: white 5px solid;
+    border-right: none;
+  }
+
+  .ryanGosling {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  .ryanGosling img {
+    border-top: #e6418d 5px solid;
+    border-left: none;
+  }
+
+  .ryanGosling ul {
+    font-size: 18px;
+  }
+
+  footer img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    translate: 0 50px;
+  }
+
+  .gallerySection {
+    border: none;
+    background-color: #fdf5fa;
+  }
+
+  .aboutMovie {
+    translate: 0px 850px;
+  }
+
+  footer {
+    translate: 0px 850px;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+
+  iframe {
+    width: 300px;
+    height: auto;
+  }
+  .trailer {
+    translate: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  iframe {
+    width: 300px;
+    height: auto;
+  }
+  .trailer {
+    translate: 0;
+  }
+  header {
+    padding: 0;
+  }
+
+  .logo {
+    position: relative;
+    top: 0;
+    width: 200px;
+    height: auto;
+    translate: 0 50px;
+  }
 }

@@ -44,7 +44,7 @@
       }
 
       header {
-        background-image: url("../images/margot-robbie-as-barbie-cq.jpg");
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/850/original/margot-robbie-as-barbie-cq.jpg?1693909780");
         background-repeat: no-repeat;
         background-size: cover;
         color: white;
@@ -54,6 +54,27 @@
         box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
         max-width: 100%;
         height: auto;
+      }
+
+      .navigation button {
+        border-radius: 100%;
+        background-color: white;
+        border: #e6418d 1px solid;
+        border-radius: 9px;
+        margin: 10px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+      }
+
+      .navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .navigation button a {
+        color: #e6418d;
+        text-decoration: none;
+        font-family: "Didact Gothic", sans-serif;
       }
 
       .logo {
@@ -239,6 +260,10 @@
         border: #e6418d 5px solid;
       }
 
+      .aboutMovie {
+        border-top: #e6418d 5px solid;
+      }
+
       footer {
         color: white;
         font-size: 20px;
@@ -246,7 +271,7 @@
         background-color: #e6418d;
       }
 
-      a {
+      footer a {
         color: white;
         text-decoration: none;
         font-family: "dancing script";
@@ -255,6 +280,25 @@
       i {
         padding: 30px;
         font-size: 32px;
+      }
+
+      @media (max-width: 1300px) {
+        .gallery {
+          grid-template-columns: 1fr 1fr;
+          translate: 0 50px;
+        }
+        .aboutMovie {
+          translate: 0px 350px;
+        }
+
+        footer {
+          translate: 0px 350px;
+        }
+        .gallerySection {
+          border-top: #e6418d;
+          border-bottom: none;
+          background-color: #fdf5fa;
+        }
       }
 
       @media (max-width: 964px) {
@@ -301,7 +345,8 @@
         }
 
         .gallerySection {
-          border: none;
+          border-top: #e6418d;
+          border-bottom: none;
           background-color: #fdf5fa;
         }
 
@@ -353,8 +398,13 @@
 
   <body>
     <header>
+      <div class="navigation">
+        <button><a href="#cast-list">Cast</a></button>
+        <button><a href="#gallery-section">Gallery</a></button>
+        <button><a href="#quotes-section">Quotes</a></button>
+      </div>
       <img
-        src="./images/logo-with-stars.png"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/851/original/logo-with-stars.png?1693909792f"
         class="logo"
         alt="Barbie logo with stars"
       />
@@ -371,13 +421,13 @@
       ></iframe>
     </div>
 
-    <div class="tag">
+    <div class="tag" id="cast-list">
       <h1>Barbie is everything.</h1>
 
       <div class="margotRobbie">
         <div class="box">
           <img
-            src="images/images-cast/margot-robbie.jpeg"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/854/original/margot-robbie.jpeg?1693910005"
             class="margot img-fluid"
             alt="Margot Robbie Barbie film poster"
           />
@@ -402,7 +452,7 @@
         </div>
         <div class="box">
           <img
-            src="images/images-cast/ryan-gosling.webp"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/897/original/tempImageeAolw2.gif?1693923688"
             class="ryan img-fluid"
             alt="Ryan Gosling Ken film poster"
           />
@@ -418,104 +468,129 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="images/images-cast/alexandra-shipp.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/861/original/alexandra-shipp.jpeg?1693910101"
                 class="d-inline-block w-25"
                 alt="Alexandra Shipp Barbie film poster"
               />
               <img
-                src="./images/images-cast/america-ferrera.png"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/866/original/america-ferrera.png?1693910207"
                 class="d-inline-block w-25"
                 alt="America Ferrera Barbie film poster"
               />
               <img
-                src="./images/images-cast/ariana-greenblatt.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/855/original/ariana-greenblatt.jpeg?1693910014"
                 class="d-inline-block w-25"
                 alt="Ariana Greenblatt Barbie film poster"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="./images/images-cast/dua-lipa.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/862/original/dua-lipa.jpeg?1693910108"
                 class="d-inline-block w-25"
                 alt="Dua Lipa Barbie film poster"
               />
               <img
-                src="./images/images-cast/emma-mackey.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/863/original/emma-mackey.jpeg?1693910187"
                 class="d-inline-block w-25"
                 alt="Emma Mackey Barbie film poster"
               />
               <img
-                src="./images/images-cast/hari-nef.webp"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/893/original/hari-nef.jpg?1693923378"
                 class="d-inline-block w-25"
                 alt="Hari Nef Barbie film poster"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="./images/images-cast/helen-mirren.webp"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/889/original/barbie-BARBIE_Character_HELEN_InstaVert_1638x2048_DOM_rgb.jpg?1693923064"
                 class="d-inline-block w-25"
                 alt="Helen Mirren Barbie film poster"
               />
               <img
-                src="./images/images-cast/issa-rae.webp"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/888/original/barbie-BARBIE_Character_ISSA_InstaVert_1638x2048_DOM_rgb.jpg?1693923029"
                 class="d-inline-block w-25"
                 alt="Issa Rae Barbie film poster"
               />
               <img
-                src="./images/images-cast/kate-mckinnon.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/858/original/kate-mckinnon.jpeg?1693910077"
                 class="d-inline-block w-25"
                 alt="Kate McKinnon Barbie film poster"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="./images/images-cast/will-ferrell.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/857/original/will-ferrell.jpeg?1693910069"
                 class="d-inline-block w-25"
                 alt="Will Ferrell Barbie film poster"
               />
               <img
-                src="./images/images-cast/michael-cera.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/856/original/michael-cera.jpeg?1693910023"
                 class="d-inline-block w-25"
                 alt="Michael Cera Barbie film poster"
               />
               <img
-                src="./images/images-cast/nicola-coughlan.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/860/original/nicola-coughlan.jpeg?1693910094"
                 class="d-inline-block w-25"
                 alt="Nicola Coughlan Barbie film poster"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="./images/images-cast/ritu-arya.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/865/original/ritu-arya.jpeg?1693910200"
                 class="d-inline-block w-25"
                 alt="Ritu Arya Barbie film poster"
               />
               <img
-                src="./images/images-cast/sharon-rooney.jpeg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/859/original/sharon-rooney.jpeg?1693910086"
                 class="d-inline-block w-25"
                 alt="Sharon Rooney Barbie film poster"
               />
               <img
-                src="./images/images-cast/simu-liu.webp"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/891/original/tempImageIQXxTa.gif?1693923234"
                 class="d-inline-block w-25"
                 alt="Simu Liu Barbie film poster"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="./images/images-cast/conner-swindells.avif"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/892/original/tempImageFnUvbC.gif?1693923304"
                 class="d-inline-block w-25"
                 alt="Conner Swindells Barbie film poster"
               />
               <img
-                src="./images/images-cast/kingsley-ben-adir.avif"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/864/original/kingsley-ben-adir.jpeg?1693910194"
                 class="d-inline-block w-25"
                 alt="Kingsley Ben-Adir Barbie film poster"
               />
               <img
-                src="./images/images-cast/emerald-fennel.avif"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/890/original/barbie-BARBIE_Character_EMERALD_InstaVert_1638x2048_DOM_rgb.jpg?1693923167"
                 class="d-inline-block w-25"
                 alt="Emerald Fennell Barbie film poster"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/894/original/tempImagevQzYpG.gif?1693923474"
+                class="d-inline-block w-25"
+                alt="Jamie Demetriou Barbie film poster"
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/895/original/tempImagezIlIKD.gif?1693923554"
+                class="d-inline-block w-25"
+                alt="Ncuti Gatwa Barbie film
+              poster"
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/896/original/tempImagep6Jgc3.gif?1693923622"
+                class="d-inline-block w-25"
+                alt="Scott Evans Barbie film poster"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/898/original/ana-kayne.jpeg?1693923786"
+                class="d-inline-block w-25"
+                alt="Ana Cruz Kayne film poster"
               />
             </div>
           </div>
@@ -542,41 +617,41 @@
     </div>
 
     <div class="tag synopsis"></div>
-    <section class="tag gallerySection">
+    <section class="tag gallerySection" id="gallery-section">
       <h2>Image gallery</h2>
 
       <div class="gallery">
         <div class="box">
           <img
-            src="images/gallery/kate-mckinnon-shoes.avif"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/900/original/birkenstocks.jpg?1693924011"
             class="photoOne"
             alt="Kat Mckinnon heels vs Birkenstocks photo"
           />
         </div>
         <div class="box">
           <img
-            src="images/gallery/margot-bikini-openingShot.jpeg"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/852/original/margot-bikini-openingShot.jpeg?1693909896"
             class="photoTwo"
             alt="Margot Robbie in striped swimsuit"
           />
         </div>
         <div class="box">
           <img
-            src="images/gallery/president-barbie.avif"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/899/original/tempImagepM7uyZ.gif?1693923941"
             class="photoFour"
             alt="President Barbie photo"
           />
         </div>
         <div class="box">
           <img
-            src="images/gallery/kens-fight.avif"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/901/original/tempImageneKWih.gif?1693924074"
             class="photoFive"
             alt="Kens getting ready to fight photo"
           />
         </div>
       </div>
     </section>
-    <div class="tag aboutMovie">
+    <div class="tag aboutMovie" id="quotes">
       <div class="paragraph">
         <h2>The iconic monologue.</h2>
         <h4 class="quotes" id="opener-quotes">
@@ -586,7 +661,7 @@
         </h4>
         <h2>America Ferrera</h2>
         <img
-          src="images/america-ferrera-1.jpeg"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/849/original/america-ferrera-1.jpeg?1693909771"
           alt="America Ferrera"
           class="americaFerrera"
         />
@@ -598,15 +673,11 @@
         <h3>Be more like Barbie!</h3>
 
         <img
-          src="images/gallery/margot-robbie-dancing.jpeg"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/853/original/margot-robbie-dancing.jpeg?1693909903"
           class="photoThree"
           alt="Margot Robbie as Barbie dancing"
         />
       </div>
-      <h5>
-        Open source code by
-        <a href="https://www.katiemaycodes.com">Katiemay 👩🏼‍💻</a>
-      </h5>
 
       <a href="https://github.com/katiemayjones"
         ><i class="fa-brands fa-github"></i
@@ -617,6 +688,10 @@
       <a href="https://www.instagram.com/katiemayjones/">
         <i class="fa-brands fa-instagram"></i
       ></a>
+      <h5>
+        Open source code by
+        <a href="https://www.katiemaycodes.com">Katiemay 👩🏼‍💻</a>
+      </h5>
     </footer>
     <script
       src="https://kit.fontawesome.com/b1106a3785.js"

@@ -18,9 +18,337 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" type="text/css" href="./src/styles.css" />
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      body {
+        text-align: center;
+        padding: 0;
+        background-color: #fdf5fa;
+        font-family: "Didact Gothic", sans-serif;
+      }
+
+      section {
+        height: 100vh;
+      }
+
+      .tag {
+        opacity: 0;
+        transform: translate(0, 10vh);
+        transition: all 1s;
+      }
+
+      .tag.visible {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
+      header {
+        background-image: url("../images/margot-robbie-as-barbie-cq.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 200px 0;
+        border-bottom: #e6418d 5px solid;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .logo {
+        position: relative;
+        top: -200px;
+        animation: fadeIn 5s;
+      }
+
+      h1 {
+        color: #e6418d;
+        text-align: center;
+        font-family: "Dancing Script", cursive;
+        font-size: 120px;
+      }
+
+      h2 {
+        font-size: 72px;
+        font-family: "Dancing Script", cursive;
+        color: #e6418d;
+        padding: 20px;
+      }
+
+      h3 {
+        font-size: 72px;
+        font-family: "Dancing Script", cursive;
+        color: white;
+        padding: 20px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+
+      .trailer {
+        translate: 0px -150px;
+      }
+
+      iframe {
+        border: #e6418d 5px solid;
+        border-radius: 9px;
+        margin: 10px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+      }
+
+      .main {
+        background-color: white;
+        border-radius: 9px;
+        padding: 10px;
+        max-width: 800px;
+      }
+
+      .ryanGosling {
+        border: #e6418d 5px solid;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .ryanGosling ul {
+        list-style: none;
+        font-size: 72px;
+        color: #e6418d;
+        margin-top: 20px;
+      }
+
+      .ryanGosling img {
+        border-left: #e6418d 5px solid;
+      }
+
+      .margotRobbie {
+        border: white 5px solid;
+        background-color: #e6418d;
+        border-radius: 9px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .margotRobbie img {
+        border-right: white 5px solid;
+      }
+
+      .margotRobbie ul {
+        list-style: none;
+        font-size: 72px;
+        color: white;
+        margin-top: 20px;
+      }
+
+      .cast {
+        margin-top: 100px;
+      }
+
+      .castWrapper img {
+        padding: 10px;
+      }
+
+      .castWrapper {
+        max-width: 1200px;
+        display: block;
+        margin: auto;
+        margin-bottom: 100px;
+        background-color: white;
+        border: #e6418d 5px solid;
+        border-radius: 9px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .gallerySection {
+        background-color: white;
+        border-top: #e6418d 5px solid;
+        border-bottom: #e6418d 5px solid;
+      }
+
+      .photoOne {
+        max-width: 350px;
+        border: #e6418d 5px solid;
+        border-radius: 9px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+        translate: 5px 25px;
+        transform: rotate(25deg);
+      }
+
+      .photoTwo {
+        max-width: 300px;
+        border: #e6418d 5px solid;
+        border-radius: 9px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+        translate: 0px 45px;
+        transform: rotate(-15deg);
+      }
+
+      .photoThree {
+        max-width: 1000px;
+        border: white 5px solid;
+        border-radius: 9px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+        margin-bottom: 20px;
+      }
+
+      .photoFour {
+        max-width: 400px;
+        border: #e6418d 5px solid;
+        border-radius: 9px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+        translate: 15px 70px;
+        transform: rotate(20deg);
+      }
+
+      .photoFive {
+        max-width: 300px;
+        border: #e6418d 5px solid;
+        border-radius: 9px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+        translate: -10px 70px;
+        transform: rotate(-15deg);
+      }
+
+      .quotes {
+        font-size: 50px;
+        padding: 50px;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .americaFerrera {
+        border-radius: 100%;
+        width: 200px;
+        margin-bottom: 20px;
+        border: #e6418d 5px solid;
+      }
+
+      footer {
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        background-color: #e6418d;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-family: "dancing script";
+      }
+
+      i {
+        padding: 30px;
+        font-size: 32px;
+      }
+
+      @media (max-width: 964px) {
+        .margotRobbie {
+          display: grid;
+          grid-template-columns: 1fr;
+          margin: 0 auto;
+        }
+        .margotRobbie ul {
+          font-size: 36px;
+        }
+
+        .margotRobbie img {
+          border-bottom: white 5px solid;
+          border-left: white 5px solid;
+          border-right: white 5px solid;
+          border-radius: 0px 0px 9px 9px;
+        }
+
+        .ryanGosling {
+          display: grid;
+          grid-template-columns: 1fr;
+          margin: 0 auto;
+        }
+
+        .ryanGosling img {
+          border-top: #e6418d 5px solid;
+          border-left: #e6418d 5px solid;
+          border-right: #e6418d 5px solid;
+          border-radius: 9px 9px 0px 0px;
+        }
+
+        .ryanGosling ul {
+          font-size: 36px;
+        }
+
+        footer img {
+          width: 300px;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+          translate: 0 50px;
+        }
+
+        .gallerySection {
+          border: none;
+          background-color: #fdf5fa;
+        }
+
+        .aboutMovie {
+          translate: 0px 850px;
+        }
+
+        footer {
+          translate: 0px 850px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 72px;
+        }
+
+        iframe {
+          width: 300px;
+          height: auto;
+        }
+        .trailer {
+          translate: 0;
+        }
+      }
+
+      @media (max-width: 750px) {
+        iframe {
+          width: 300px;
+          height: auto;
+        }
+        .trailer {
+          translate: 0;
+        }
+        header {
+          padding: 0;
+        }
+
+        .logo {
+          position: relative;
+          top: 0;
+          width: 200px;
+          height: auto;
+          translate: 0 50px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -56,16 +384,7 @@
         </div>
         <div class="box">
           <ul>
-            <li>
-              "I don't even have context for this, but my feet, my heels are on
-              the ground."
-            </li>
             <li>"I would never wear heels if my feet were shaped this way."</li>
-            <li>
-              "I feel kind of ill at ease. Like I don't know the word for it,
-              but I'm conscious, but it's myself I'm conscious of."
-            </li>
-            <li>"Do you guys ever think about dying?"</li>
           </ul>
         </div>
       </div>
@@ -76,16 +395,9 @@
       <div class="ryanGosling">
         <div class="box">
           <ul>
-            <li>"Actually my job, it's just beach."</li>
-            <li>"Ken's Mojo Dojo Casa House."</li>
-            <li>
-              "Shredding waves is much more dangerous than people realise."
-            </li>
-            <li>"Horses are just extensions of men."</li>
             <li>
               "I'll take a high level, high paying job with influence, please."
             </li>
-            <li>"I am <strong>Kenough."</strong></li>
           </ul>
         </div>
         <div class="box">
@@ -266,13 +578,18 @@
     </section>
     <div class="tag aboutMovie">
       <div class="paragraph">
-        <h2>And then there was the iconic monologue.</h2>
+        <h2>The iconic monologue.</h2>
         <h4 class="quotes" id="opener-quotes">
           You have to be thin, but not too thin. And you can never say you want
           to be thin. You have to say you want to be healthy, but also you have
           to be thin.
         </h4>
-        <h2></h2>
+        <h2>America Ferrera</h2>
+        <img
+          src="images/america-ferrera-1.jpeg"
+          alt="America Ferrera"
+          class="americaFerrera"
+        />
       </div>
     </div>
 
@@ -301,7 +618,6 @@
         <i class="fa-brands fa-instagram"></i
       ></a>
     </footer>
-    <script src="./src/javascript.js"></script>
     <script
       src="https://kit.fontawesome.com/b1106a3785.js"
       crossorigin="anonymous"
@@ -312,5 +628,45 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function changeDescription() {
+        let quotes = [
+          "You have to be thin, but not too thin. And you can never say you want to be thin. You have to say you want to be healthy, but also you have to be thin.",
+          "You have to have money, but you can't ask for money because that's crass.",
+          "You have to be a boss, but you can't be mean. You have to lead, but you can't squash other people's ideas.",
+          "You're supposed to love being a mother, but don't talk about your kids all the damn time.",
+          "You have to be a career woman but also always be looking out for other people.",
+          "You have to answer for men's bad behavior, which is insane, but if you point that out, you're accused of complaining.",
+          "You're supposed to stay pretty for men, but not so pretty that you tempt them too much or that you threaten other women because you're supposed to be a part of the sisterhood.",
+        ];
+
+        let quoteChange = document.getElementById("opener-quotes");
+
+        let currentValue = 0;
+
+        setInterval(() => {
+          quoteChange.innerHTML = quotes[currentValue];
+          currentValue = (currentValue + 1) % quotes.length;
+        }, 4000);
+      }
+
+      changeDescription();
+
+      $(document).on("scroll", function () {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+
+        for (var i = 0; i < tags.length; i++) {
+          var tag = tags[i];
+          if ($(tag).position().top < pageBottom) {
+            $(tag).addClass("visible");
+          } else {
+            $(tag).removeClass("visible");
+          }
+        }
+      });
+    </script>
   </body>
 </html>

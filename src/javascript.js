@@ -16,7 +16,7 @@ function changeDescription() {
   setInterval(() => {
     quoteChange.innerHTML = quotes[currentValue];
     currentValue = (currentValue + 1) % quotes.length;
-  }, 3000);
+  }, 4000);
 }
 
 changeDescription();

@@ -23,7 +23,7 @@ section {
 }
 
 header {
-  background-image: url("../images/gallery/margot-robbie-dancing.jpeg");
+  background-image: url("../images/margot-robbie-as-barbie-cq.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -101,6 +101,10 @@ iframe {
   animation: fadeIn 5s;
 }
 
+.cast {
+  margin-top: 100px;
+}
+
 .castWrapper img {
   padding: 10px;
 }
@@ -109,11 +113,65 @@ iframe {
   max-width: 800px;
   display: block;
   margin: auto;
-  margin-top: 50px;
+  margin-bottom: 100px;
   background-color: white;
   border: #e6418d 5px solid;
   border-radius: 9px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.gallerySection {
+  background-color: white;
+  border-top: #e6418d 5px solid;
+  border-bottom: #e6418d 5px solid;
+}
+
+.photoOne {
+  max-width: 350px;
+  border: #e6418d 5px solid;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  translate: 5px 25px;
+  transform: rotate(25deg);
+}
+
+.photoTwo {
+  max-width: 300px;
+  border: #e6418d 5px solid;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  translate: 0px 45px;
+  transform: rotate(-15deg);
+}
+
+.photoThree {
+  max-width: 1000px;
+  border: #e6418d 5px solid;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+}
+
+.photoFour {
+  max-width: 400px;
+  border: #e6418d 5px solid;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  translate: 15px 70px;
+  transform: rotate(20deg);
+}
+
+.photoFive {
+  max-width: 300px;
+  border: #e6418d 5px solid;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+  translate: -10px 70px;
+  transform: rotate(-15deg);
 }
 
 .quotes {
